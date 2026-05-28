@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enchante by Yann — Bespoke floral arrangements crafted with love for every occasion.">
+  <title>Enchante by Yann — Bespoke Floristry</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating music toggle button -->
+  <button class="music-btn" id="music-btn" aria-label="Play background music" title="Toggle music">
+    <svg class="icon-music" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/>
+    </svg>
+    <svg class="icon-muted" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:none">
+      <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/>
+      <line x1="2" y1="2" x2="22" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Enchante <em>by Yann</em></a>
+
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero"         class="nav-link">Home</a></li>
+        <li><a href="#about"        class="nav-link">Our Story</a></li>
+        <li><a href="#services"     class="nav-link">Flowers</a></li>
+        <li><a href="#gallery"      class="nav-link">Gallery</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO — video background -->
+    <section class="hero" id="hero">
+      <!-- Place hero-bg.mp4 in the same folder for video background -->
+      <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
+        <source src="hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow animate">Bespoke Floristry</p>
+        <h1 class="hero-headline animate">Where Every Bloom<br><em>Tells a Story</em></h1>
+        <p class="hero-subheadline animate">
+          Handcrafted floral arrangements for weddings, events, and everyday moments —
+          created with love and an eye for beauty.
+        </p>
+        <div class="hero-ctas animate">
+          <a href="#services" class="btn btn-primary">Explore Flowers</a>
+          <a href="#contact"  class="btn btn-outline">Book a Consultation</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+          <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="8" cy="7" r="2" fill="currentColor">
+            <animate attributeName="cy" values="7;14;7" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-image animate">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder" aria-hidden="true">
+              <!-- Replace with <img src="about.jpg" alt="Yann arranging flowers"> -->
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                <circle cx="40" cy="30" r="18" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 70 C10 52 23 44 40 44 C57 44 70 52 70 70" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <p>Add about.jpg</p>
+            </div>
+          </div>
+          <div class="about-accent-dot"></div>
+        </div>
+
+        <div class="about-text">
+          <p class="section-eyebrow animate">Our Story</p>
+          <h2 class="section-title animate">Passion Blooms<br>in Every Petal</h2>
+          <p class="body-text animate">
+            Enchante by Yann was born from a deep love of nature's most beautiful creations.
+            With years of experience and an artist's eye, Yann transforms fresh blooms into
+            breathtaking arrangements that capture emotion and elegance in equal measure.
+          </p>
+          <p class="body-text animate">
+            Every arrangement is thoughtfully composed — from the first stem to the final ribbon —
+            ensuring each piece is as unique as the moment it celebrates.
+          </p>
+          <a href="#contact" class="btn btn-primary animate">Meet Yann</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow animate">What We Offer</p>
+          <h2 class="section-title animate">Our Floral Collections</h2>
+          <p class="section-subtitle animate">
+            From intimate bouquets to grand event installations, every creation is made to order.
+          </p>
+        </header>
+
+        <div class="services-grid">
+
+          <article class="service-card animate">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M24 8 C24 8 16 14 16 22 C16 26.4 19.6 30 24 30 C28.4 30 32 26.4 32 22 C32 14 24 8 24 8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M24 30 L24 42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M24 36 C22 36 18 34 16 30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M24 38 C26 38 30 36 32 32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Wedding Flowers</h3>
+            <p>Bridal bouquets, ceremony arches, table centrepieces, and full venue florals crafted for your perfect day.</p>
+          </article>
+
+          <article class="service-card animate">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="20" width="32" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M16 20 C16 14 20 8 24 8 C28 8 32 14 32 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M24 28 C21 28 18 26 18 23 C18 20 21 18 24 18 C27 18 30 20 30 23 C30 26 27 28 24 28Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3>Gift Bouquets</h3>
+            <p>Seasonal hand-tied bouquets and boxed arrangements, perfect for birthdays, anniversaries, and special surprises.</p>
+          </article>
+
+          <article class="service-card animate">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M12 36 L24 12 L36 36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 28 L32 28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="24" cy="10" r="4" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3>Event Styling</h3>
+            <p>Corporate events, private dinners, and celebrations — we bring your floral vision to life, on any scale.</p>
+          </article>
+
+          <article class="service-card animate">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M24 8 C24 8 20 12 20 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M24 8 C24 8 28 12 28 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 20 C12 20 16 18 20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M36 20 C36 20 32 18 28 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M24 40 L24 32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <ellipse cx="24" cy="40" rx="6" ry="2" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3>Subscription Blooms</h3>
+            <p>Weekly or fortnightly fresh flower deliveries — keep your home or office filled with seasonal beauty year-round.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow animate">Our Work</p>
+          <h2 class="section-title animate">A Garden of Creations</h2>
+        </header>
+
+        <div class="gallery-grid">
+          <!-- Replace each div with <img src="gallery-1.jpg" alt="..."> etc. -->
+          <div class="gallery-item animate" style="--delay:0ms"><div class="gallery-placeholder">gallery-1.jpg</div></div>
+          <div class="gallery-item animate tall" style="--delay:80ms"><div class="gallery-placeholder">gallery-2.jpg</div></div>
+          <div class="gallery-item animate" style="--delay:160ms"><div class="gallery-placeholder">gallery-3.jpg</div></div>
+          <div class="gallery-item animate wide" style="--delay:240ms"><div class="gallery-placeholder">gallery-4.jpg</div></div>
+          <div class="gallery-item animate" style="--delay:320ms"><div class="gallery-placeholder">gallery-5.jpg</div></div>
+          <div class="gallery-item animate" style="--delay:400ms"><div class="gallery-placeholder">gallery-6.jpg</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow animate">Kind Words</p>
+          <h2 class="section-title animate">What Clients Say</h2>
+        </header>
+
+        <div class="testimonials-grid">
+
+          <blockquote class="testimonial animate">
+            <p>"The bridal bouquet was beyond anything I imagined. Every guest asked about the florist — pure magic."</p>
+            <footer><strong>Sophie L.</strong> — Wedding Client</footer>
+          </blockquote>
+
+          <blockquote class="testimonial animate">
+            <p>"Yann transformed our event space into something straight out of a dream. Absolutely stunning work."</p>
+            <footer><strong>Adrienne K.</strong> — Corporate Event</footer>
+          </blockquote>
+
+          <blockquote class="testimonial animate">
+            <p>"My weekly subscription bouquets are the highlight of my week. Always fresh, always beautiful, always unique."</p>
+            <footer><strong>Marie T.</strong> — Subscription Client</footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow animate">Get in Touch</p>
+          <h2 class="section-title animate">Let's Create Something Beautiful</h2>
+          <p class="section-subtitle animate">
+            Tell us about your occasion and we'll craft something truly enchanting.
+          </p>
+        </header>
+
+        <div class="contact-wrapper animate">
+          <form
+            id="contact-form"
+            action="https://formsubmit.co/your-email@example.com"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="_subject"  value="New Enquiry – Enchante by Yann">
+            <input type="hidden" name="_captcha"  value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next"     value="https://yoursite.com/#contact">
+            <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Sophie Martin" required>
+                <span class="field-error" id="name-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="sophie@example.com" required>
+                <span class="field-error" id="email-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="occasion">Occasion</label>
+              <select id="occasion" name="occasion" required>
+                <option value="" disabled selected>Select an occasion…</option>
+                <option>Wedding</option>
+                <option>Birthday</option>
+                <option>Corporate Event</option>
+                <option>Anniversary</option>
+                <option>Subscription</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error" id="occasion-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell us about your vision</label>
+              <textarea id="message" name="message" rows="5" placeholder="Describe your event, preferred flowers, colours, budget…" required></textarea>
+              <span class="field-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span class="btn-text">Send Enquiry</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+          </form>
+
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>123 Blossom Lane, Your City</span>
+            </div>
+            <div class="contact-info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.0 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>+1 (555) 000-0000</span>
+            </div>
+            <div class="contact-info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>hello@enchantebyann.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <p class="footer-logo">Enchante <em>by Yann</em></p>
+      <p class="footer-tagline">Crafting beauty, one bloom at a time.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> Enchante by Yann. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
